@@ -1,0 +1,640 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 18px;
+}
+
+header {
+  background-image: url("images/desktop/image-header.jpg");
+  background-size: crop;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  .mobile-nav {
+    display: none;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  p {
+    font-family: "Barlow", serif;
+    font-weight: 900;
+    font-size: 30px;
+    color: white;
+    margin: 0;
+    padding: 2rem;
+    margin-right: auto;
+    vertical-align: baseline;
+  }
+  .desktop-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0px;
+    align-items: center;
+    padding-top: 0em;
+    margin: 0;
+
+    .logo {
+      font-family: "Barlow", serif;
+      font-weight: 900;
+      font-size: 30px;
+      color: white;
+    }
+    // li:first-child {
+    //   margin-right: auto;
+    //   margin-left: 2em;
+  }
+  li:last-child {
+    margin-right: 7em;
+  }
+  li {
+    font-family: barlow;
+    display: inline-block;
+    margin-right: 3em;
+
+    a {
+      text-decoration: none;
+      color: white;
+      padding: 15px;
+    }
+    button {
+      background-color: hsl(199, 86%, 71%);
+      padding: 1em 2em;
+      color: white;
+      font-weight: bold;
+      border-radius: 500px;
+      border: none;
+      font-family: barlow;
+      font-size: 1em;
+    }
+  }
+}
+
+nav .desktop-nav ul li a:hover {
+  background-color: hsl(199, 86%, 71%);
+  color: white;
+  font-weight: bold;
+  border-radius: 500px;
+  border: none;
+  font-family: barlow;
+}
+
+.main-heading {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 5em;
+  h1 {
+    color: white;
+    font-size: 5em;
+    font-family: "Fraunces";
+  }
+}
+
+a {
+  text-decoration: none;
+  color: rgb(41, 49, 59);
+  font-size: 1.3em;
+}
+.grid-container {
+  height: 200vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "egg-text egg"
+    "glass glass-text"
+    "cherry clem";
+  // padding: 10em;
+  margin-top: 0;
+  padding-top: 0;
+
+  .beside-egg {
+    grid-area: egg-text;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 8em;
+    padding-right: 8em;
+
+    h2 {
+      font-family: "barlow", serif;
+      font-weight: 800;
+      font-size: 40px;
+      color: hsl(212, 27%, 19%);
+      margin-left: -7.3em;
+    }
+    p {
+      font-family: serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: hsl(195, 10%, 39%);
+    }
+    button {
+      margin-left: -2.5em;
+      padding: 1em;
+      margin-top: 1em;
+      border: none;
+      font-size: 1.2em;
+      background-color: beige;
+      text-decoration: none;
+      border-bottom: 5px solid rgb(245, 211, 60);
+      line-height: 0;
+      margin-left: -15.8em;
+      a {
+        font-size: 1em;
+      }
+    }
+  }
+  .egg {
+    grid-area: egg;
+    background-image: url("images/desktop/image-transform.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+  .beside-glass {
+    grid-area: glass-text;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 8em;
+    padding-right: 8em;
+    h2 {
+      font-family: "barlow", serif;
+      font-weight: 800;
+      font-size: 40px;
+      color: hsl(212, 27%, 19%);
+      margin-left: -3.1em;
+    }
+    p {
+      font-family: serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: hsl(195, 10%, 39%);
+    }
+    button {
+      margin-left: -23.9em;
+      margin-top: 1em;
+      padding: 1em;
+
+      border: none;
+      font-size: 1.2em;
+      background-color: beige;
+      text-decoration: none;
+      border-bottom: 5px solid rgb(245, 211, 60);
+      line-height: 0;
+      a {
+        font-size: 1em;
+      }
+    }
+  }
+  .glass {
+    grid-area: glass;
+    background-image: url("images/desktop/image-stand-out.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+  .cherry {
+    grid-area: cherry;
+    background-image: url("images/desktop/image-graphic-design.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      padding-top: 6em;
+      // padding-left: 7.3em;
+      font-family: "barlow", serif;
+      font-weight: 800;
+      color: hsl(167, 39%, 21%);
+      font-size: 40px;
+    }
+    p {
+      padding-left: 8.55em;
+      padding-right: 8.5em;
+      font-family: serif;
+      font-weight: 600;
+      font-size: 20px;
+      color: hsl(167, 40%, 24%);
+      text-align: center;
+      width: 22em;
+    }
+  }
+  .clementine {
+    background-image: url("images/desktop/image-photography.jpg");
+    grid-area: clem;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      padding-top: 6em;
+      // padding-left: 7.3em;
+      font-family: "barlow", serif;
+      font-weight: 800;
+      color: hsl(198, 62%, 26%);
+      font-size: 40px;
+    }
+    p {
+      padding-left: 8.55em;
+      padding-right: 8.5em;
+      font-family: serif;
+      font-weight: 600;
+      font-size: 20px;
+      color: hsl(198, 62%, 26%);
+      text-align: center;
+      width: 20em;
+    }
+  }
+}
+
+.testimonials {
+  .test-heading {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    h4 {
+      color: hsl(210, 4%, 67%);
+      font-family: barlow, serif;
+      padding-top: 5em;
+      padding-bottom: 2em;
+      letter-spacing: 4px;
+    }
+  }
+  .test-cards {
+    display: flex;
+    gap: 2em;
+    padding: 0 2em;
+    justify-content: center;
+    align-content: center;
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      img {
+        max-width: 10%;
+        border-radius: 50px;
+      }
+      p {
+        font-family: serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: hsl(195, 10%, 39%);
+        text-align: center;
+      }
+      p.name {
+        font-family: "barlow", serif;
+        font-weight: 800;
+        font-size: 20px;
+        color: hsl(212, 27%, 19%);
+      }
+      p.company-title {
+        font-family: serif;
+        font-size: 10px;
+        font-weight: 600;
+        color: hsl(195, 16%, 71%);
+        padding: -1em;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.image-gallery {
+  display: flex;
+  margin-top: 6em;
+  background-color: black;
+
+  img {
+    width: 25%;
+    height: 100%;
+  }
+}
+
+.footer {
+  background-color: hsl(168, 52%, 64%);
+  margin: auto;
+  padding: 0;
+  p {
+    font-family: "Barlow", serif;
+    font-weight: 900;
+    font-size: 30px;
+    color: hsl(167, 39%, 21%);
+    text-align: center;
+    padding-top: 2em;
+    margin: 0;
+  }
+  .bottomLinks {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 3em;
+      padding-top: 1em;
+      padding-bottom: 3em;
+      padding-right: 02em;
+      li {
+        a {
+          color: hsl(167, 51%, 32%);
+        }
+      }
+    }
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding-bottom: 2em;
+  }
+}
+
+.attribution {
+  background-color: hsl(168, 52%, 64%);
+  a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    overflow-x: scroll;
+  }
+
+  header {
+    background-image: url("images/mobile/image-header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 50vh;
+    width: 100%;
+    margin: auto;
+    .main-heading {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+      margin: 0;
+      h1 {
+        padding-top: -2em;
+        font-size: 2.5em;
+        text-align: center;
+      }
+    }
+    .hidden {
+      display: none;
+    }
+  }
+
+  header .mobile-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5px 20px;
+    p {
+      margin-right: auto;
+      font-family: "Barlow", serif;
+      font-weight: 900;
+      color: white;
+      font-size: 1.2em;
+    }
+    ul.menu {
+      display: none;
+      position: fixed;
+      transform: translateY(20px);
+      transform: translateX(-230px);
+      z-index: 10;
+      background-color: white;
+      padding: 1em;
+      // padding-left: 5em;
+      width: 250px;
+      text-align: center;
+      line-height: 35px;
+      border-radius: 50px;
+    }
+    .dropdown .overlay ul li a:hover {
+      background-color: yellow;
+      padding: 7px;
+      border-radius: 50px;
+    }
+    [id^="drop"]:checked + .overlay ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .dropdown {
+      display: flex;
+      flex-direction: column;
+      ul li {
+        display: block;
+        width: 80%;
+      }
+    }
+    .toggle {
+      display: block;
+      background-color: hsl(199, 86%, 71%);
+      padding: 14px 20px;
+      color: black;
+      font-size: 17px;
+      text-decoration: none;
+      border: none;
+      border-radius: 50px;
+    }
+  }
+
+  nav {
+    display: none;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    height: 400vh;
+    width: 100vw;
+    grid-template-areas:
+      "egg"
+      "egg-text"
+      "glass"
+      "glass-text"
+      "cherry"
+      "clem";
+    // padding: 10em;
+    margin-top: 0;
+    padding-top: 0;
+    .egg {
+      grid-area: egg;
+      background-image: url("images/mobile/image-transform.jpg");
+      background-size: cover;
+      background-position: center center;
+      width: 100vw;
+    }
+    .beside-egg {
+      height: 100%;
+      width: 100vw;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      h2 {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+      button {
+        padding: 0;
+        margin: 0;
+        border-bottom: 9px solid rgb(245, 211, 60);
+      }
+    }
+
+    .glass {
+      grid-area: glass;
+      background-image: url("images/desktop/image-stand-out.jpg");
+      background-size: cover;
+      background-position: center center;
+      width: 100vw;
+    }
+    .beside-glass {
+      height: 100%;
+      width: 100vw;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      h2 {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+      button {
+        padding: 0;
+        margin: 0;
+        border-bottom: 9px solid rgb(245, 211, 60);
+      }
+    }
+
+    .cherry {
+      grid-area: cherry;
+      background-image: url("images/desktop/image-graphic-design.jpg");
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      h3 {
+        padding-top: 6em;
+        // padding-left: 7.3em;
+        font-family: "barlow", serif;
+        font-weight: 800;
+        color: hsl(167, 39%, 21%);
+        font-size: 40px;
+      }
+      p {
+        // padding-left: 8.55em;
+        // padding-right: 8.5em;
+        font-family: serif;
+        font-weight: 600;
+        font-size: 15px;
+        color: hsl(167, 40%, 24%);
+        text-align: center;
+        width: 22em;
+      }
+    }
+    .clementine {
+      background-image: url("images/desktop/image-photography.jpg");
+      grid-area: clem;
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      h3 {
+        padding-top: 6em;
+        // padding-left: 7.3em;
+        font-family: "barlow", serif;
+        font-weight: 800;
+        color: hsl(198, 62%, 26%);
+        font-size: 40px;
+      }
+      p {
+        padding-left: 8.55em;
+        padding-right: 8.5em;
+        font-family: serif;
+        font-weight: 600;
+        font-size: 15px;
+        color: hsl(198, 62%, 26%);
+        text-align: center;
+        width: 20em;
+      }
+    }
+  }
+
+  .testimonials {
+    .test-cards {
+      flex-direction: column;
+      .card {
+        img {
+          max-width: 20%;
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+  .image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  footer {
+    .bottomLinks {
+      ul {
+        padding-right: 0;
+      }
+    }
+  }
+}
